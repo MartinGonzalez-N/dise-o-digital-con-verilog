@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[3]",
+					"strict" : false
+				},
+				{
+					"name" : "carry_out",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "carry_in",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
