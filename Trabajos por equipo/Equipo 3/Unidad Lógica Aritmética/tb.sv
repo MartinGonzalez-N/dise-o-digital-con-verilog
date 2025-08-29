@@ -1,0 +1,49 @@
+module tb;
+reg [3:0]a=0;
+reg [3:0]b=0;
+reg [1:0]control=0;
+wire [3:0]result;
+
+alu alu_0(.a(a),
+			.b(b),
+			.control(control),
+			.result(result),
+			.v(v),
+			.c(c),
+			.n(n),
+			.z(z)
+			);
+
+initial begin
+#10;
+//add
+repeat (25) begin
+a = $random;
+b = $random;
+control = 2'd0;
+#10;
+end
+//sub
+repeat (25) begin
+a = $random;
+b = $random;
+control = 2'd1;
+#10;
+end
+//and
+repeat (25) begin
+a = $random;
+b = $random;
+control = 2'd2;
+#10;
+end
+//or
+repeat (25) begin
+a = $random;
+b = $random;
+control = 2'd3;
+#10;
+end
+end
+
+endmodule
