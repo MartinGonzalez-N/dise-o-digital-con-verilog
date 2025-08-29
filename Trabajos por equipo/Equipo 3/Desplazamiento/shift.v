@@ -1,0 +1,28 @@
+module shift #(parameter WIDTH = 4)(
+input clk,
+input arstn,
+input s_in,
+input en,
+input dir,
+input rot,
+output reg [WIDTH-1:0]out);
+
+always @(posedge clk or negedge arstn) begin
+	if (!arstn)
+		out <= {WIDTH{1'b0}};
+	else if (en) begin
+		if (dir) begin
+			if (rot)
+				out <= {out[WIDTH-2:0], out[WIDTH-1]};
+			else
+				out <= {out[WIDTH-2:0], s_in};
+		end else begin
+			if(rot)
+				out <= {out[0], out[WIDTH-1:1]};
+			else
+				out <= {s_in, out[WIDTH-1:1]};
+		end
+	end
+end
+
+endmodule
