@@ -1,0 +1,7 @@
+
+State Machine - |serial_adder|control_fsm:control_fsm_i|state
+Name state.STATE_DONE state.STATE_BUSY state.STATE_START state.00 
+state.00 0 0 0 0 
+state.STATE_START 0 0 1 1 
+state.STATE_BUSY 0 1 0 1 
+state.STATE_DONE 1 0 0 1 

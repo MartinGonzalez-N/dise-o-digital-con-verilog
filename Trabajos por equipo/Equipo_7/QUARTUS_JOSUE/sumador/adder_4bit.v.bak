@@ -1,0 +1,4 @@
+module adder_4bit (input a[3:0], b[3:0], carry_in, output sum[3:0], carry_out);
+	wire carry[3:0];
+	Sumador adder0(.a(a[o]),.b(b[0]),.carry_in(carry_in),.sum(sum[0]),.carry_out(carry[0]));
+	

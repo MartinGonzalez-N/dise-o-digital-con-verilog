@@ -1,0 +1,43 @@
+module tb;
+reg [3:0]A; 
+reg [3:0]B;
+reg [1:0]control;
+wire [3.0]result;
+
+alu alu_i (.A(A),.B(B),.control(control),.result(result));
+
+initial begin
+#10
+//adder
+repeat (25) begin
+A = $random;
+B = $random;
+control = 2'd0;
+end
+end
+#10
+//sub
+repeat (25) begin
+A = $random;
+B = $random;
+control = 2'd1;
+end
+end
+#10
+//and
+repeat (25) begin
+A = $random;
+B = $random;
+control = 2'd2;
+end
+end
+#10
+//or
+repeat (25) begin
+A = $random;
+B = $random;
+control = 2'd3;
+end
+end
+
+endmodule

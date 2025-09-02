@@ -1,0 +1,14 @@
+module subtractor #(parameter N=8)
+(input wire [N-1:0]A,input wire [N-1:0]B, input wire [N-1:0]R, output OVF);
+
+wire [N-1:0]B_Compl;
+wire [N-1:0]Sum;
+
+assign B_Comp = -B + 1;
+assign Sum = A + B_Comp;
+assign R = Sum;
+
+//si el resultado de los signos es diferente hay OVF
+assign OVF = ( A[N-1] & ~B_Comp[N-1] & ~R[N-1]) | ( A[N-1] & B_Comp[N-1] & R[N-1]);
+
+endmodule

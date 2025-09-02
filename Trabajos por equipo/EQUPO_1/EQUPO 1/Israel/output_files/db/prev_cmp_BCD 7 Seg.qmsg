@@ -1,0 +1,2 @@
+{ "Error" "EQEXE_UNKNOWN_NON_OPTION_ARGUMENT" "7 " "Unknown argument \"7\". Refer to --help for legal arguments." {  } {  } 0 23028 "Unknown argument \"%1!s!\". Refer to --help for legal arguments." 0 0 "Design Software" 0 -1 1756239252125 ""}
+{ "Error" "EFLOW_ERROR_COUNT" "Full Compilation 1  0 s " "Quartus Prime Full Compilation was unsuccessful. 1 error, 0 warnings" {  } {  } 0 293001 "Quartus Prime %1!s! was unsuccessful. %2!d! error%3!s!, %4!d! warning%5!s!" 0 0 "Design Software" 0 -1 1756239252647 ""}

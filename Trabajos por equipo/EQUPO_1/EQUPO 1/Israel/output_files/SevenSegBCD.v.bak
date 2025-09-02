@@ -1,0 +1,29 @@
+module SevenSegBCD(input wire [3:0]bcd, output wire [6:0]seg, output comun);
+
+
+wire [6:0] seg_ = 
+	assign bdc == 4'd0' ? 7b'1000000:
+	assign bdc == 4'd1' ? 7b'1111001:
+	assign bdc == 4'd2' ? 7b'0100100:
+	assign bdc == 4'd3' ? 7b'0000110:
+	assign bdc == 4'd4' ? 7b'0011001:
+	assign bdc == 4'd5' ? 7b'0010010:
+	assign bdc == 4'd6' ? 7b'0000010:
+	assign bdc == 4'd7' ? 7b'1111000:
+	assign bdc == 4'd8' ? 7b'0000000:
+	assign bdc == 4'd9' ? 7b'0000100;
+	
+	assign comun = 1'b1;
+
+	
+	
+	
+endmodule
+	
+	
+
+
+	
+
+ 
+

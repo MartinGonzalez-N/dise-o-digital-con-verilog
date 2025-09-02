@@ -1,0 +1,113 @@
+|serial_adder
+clk => clk.IN5
+rst => rst.IN1
+start => start.IN1
+in_a[0] => in_a[0].IN1
+in_a[1] => in_a[1].IN1
+in_a[2] => in_a[2].IN1
+in_a[3] => in_a[3].IN1
+in_b[0] => in_b[0].IN1
+in_b[1] => in_b[1].IN1
+in_b[2] => in_b[2].IN1
+in_b[3] => in_b[3].IN1
+sum[0] << sum[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] << sum[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] << sum[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] << sum[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c << c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|control_fsm:control_fsm_i
+clk => done~reg0.CLK
+clk => busy~reg0.CLK
+clk => state~1.DATAIN
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+start => Selector0.IN3
+start => Selector2.IN3
+start => Selector1.IN1
+cnt_done => next_state.STATE_DONE.DATAB
+cnt_done => Selector2.IN1
+busy <= busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|counter:counter_i
+clk => count[0].CLK
+clk => count[1].CLK
+busy => count.OUTPUTSELECT
+busy => count.OUTPUTSELECT
+cnt_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|input_reg:input_reg_a
+clk => data[3].CLK
+clk => data[2].CLK
+clk => data[1].CLK
+clk => data[0].CLK
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+p_in[0] => data.DATAB
+p_in[1] => data.DATAB
+p_in[2] => data.DATAB
+p_in[3] => data.DATAB
+out <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|input_reg:input_reg_b
+clk => data[3].CLK
+clk => data[2].CLK
+clk => data[1].CLK
+clk => data[0].CLK
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+shift => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+load => data.OUTPUTSELECT
+p_in[0] => data.DATAB
+p_in[1] => data.DATAB
+p_in[2] => data.DATAB
+p_in[3] => data.DATAB
+out <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|adder:adder_i
+ci => s.IN1
+ci => c.IN1
+a[0] => s.IN0
+a[0] => g[0].IN0
+a[0] => p[0].IN0
+b[0] => s.IN1
+b[0] => g[0].IN1
+b[0] => p[0].IN1
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_adder|output_reg:output_reg_i
+clk => out[3]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+in => out[3]~reg0.DATAIN
+shift => out[3]~reg0.ENA
+shift => out[0]~reg0.ENA
+shift => out[1]~reg0.ENA
+shift => out[2]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

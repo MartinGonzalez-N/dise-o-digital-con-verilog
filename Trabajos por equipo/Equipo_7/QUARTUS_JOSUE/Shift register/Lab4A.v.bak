@@ -1,0 +1,18 @@
+module Lab4A (
+	input a,
+	input rst,
+	input clk,
+	output q0, q1, q2, q3,
+	output [3:0]q
+	);
+	
+	always @(posedge clk, negedge rst) 
+	begin
+			if (rst == 0) 
+			q0 <= a;
+	end 
+	always @(posedge clk, negedge rst) 
+	begin
+			if (rst == 0) 
+			q1 <= q0;
+	end 

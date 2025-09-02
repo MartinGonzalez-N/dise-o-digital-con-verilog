@@ -1,0 +1,20 @@
+module counter( input clk, input arstn, input en, input [3:0]preset, output reg [3:0]count);
+
+always @(posedge clk) begin 
+  if(!arstn)
+   count <= 4'b000;
+else begin 
+ if(en)
+  if(preset == count)
+    count <=4'b000;
+	else begin
+		if(en)
+			if(preset == count)
+				count <= 4'b0000;
+			else
+				count <= count + 1;
+	end
+ end
+end
+
+endmodule 

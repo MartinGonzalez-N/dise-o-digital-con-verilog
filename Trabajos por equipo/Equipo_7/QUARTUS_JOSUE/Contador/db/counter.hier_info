@@ -1,0 +1,55 @@
+|top
+clk => clk.IN1
+arst => arst.IN1
+en => en.IN1
+preset[0] => preset[0].IN1
+preset[1] => preset[1].IN1
+preset[2] => preset[2].IN1
+preset[3] => preset[3].IN1
+display[0] << bcd:bcd_i.display
+display[1] << bcd:bcd_i.display
+display[2] << bcd:bcd_i.display
+display[3] << bcd:bcd_i.display
+display[4] << bcd:bcd_i.display
+display[5] << bcd:bcd_i.display
+display[6] << bcd:bcd_i.display
+bin[0] << count[0].DB_MAX_OUTPUT_PORT_TYPE
+bin[1] << count[1].DB_MAX_OUTPUT_PORT_TYPE
+bin[2] << count[2].DB_MAX_OUTPUT_PORT_TYPE
+bin[3] << count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|counter:count_1
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+arst => count.OUTPUTSELECT
+arst => count.OUTPUTSELECT
+arst => count.OUTPUTSELECT
+arst => count.OUTPUTSELECT
+en => ~NO_FANOUT~
+preset[0] => WideOr0.IN0
+preset[1] => WideOr0.IN1
+preset[2] => WideOr0.IN2
+preset[3] => WideOr0.IN3
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bcd:bcd_i
+a[0] => Decoder0.IN3
+a[1] => Decoder0.IN2
+a[2] => Decoder0.IN1
+a[3] => Decoder0.IN0
+display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

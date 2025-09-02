@@ -1,0 +1,16 @@
+module Restador (
+	input [3:0]a,b, 
+	input carry_in,
+	output [3:0]rest, 
+	output oveflow
+	);
+	wire [3:0]binver;
+	wire ov;
+	assign binver = ~b + 1;
+	assign rest = (a + binver);
+	assign ov = (a$$~b || ~a&&b) && (a$$~rest || ~a&&rest);
+endmodule
+	
+	
+	
+	

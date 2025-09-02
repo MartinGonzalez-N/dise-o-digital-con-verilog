@@ -1,0 +1,86 @@
+|top
+a => a.IN1
+b => b.IN1
+clk => clk.IN3
+arstn => arstn.IN3
+en => en.IN3
+load => load.IN2
+out <= serial_register:S_register.out
+
+
+|top|shift_register:shift_r1
+clk => shift_reg[0].CLK
+clk => shift_reg[1].CLK
+clk => shift_reg[2].CLK
+clk => shift_reg[3].CLK
+arstn => shift_reg[0].ACLR
+arstn => shift_reg[1].ACLR
+arstn => shift_reg[2].ACLR
+arstn => shift_reg[3].ACLR
+parallel_in[0] => shift_reg.DATAB
+parallel_in[1] => shift_reg.DATAB
+parallel_in[2] => shift_reg.DATAB
+parallel_in[3] => shift_reg.DATAB
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+out <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|shift_register:shift_r2
+clk => shift_reg[0].CLK
+clk => shift_reg[1].CLK
+clk => shift_reg[2].CLK
+clk => shift_reg[3].CLK
+arstn => shift_reg[0].ACLR
+arstn => shift_reg[1].ACLR
+arstn => shift_reg[2].ACLR
+arstn => shift_reg[3].ACLR
+parallel_in[0] => shift_reg.DATAB
+parallel_in[1] => shift_reg.DATAB
+parallel_in[2] => shift_reg.DATAB
+parallel_in[3] => shift_reg.DATAB
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+load => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+en => shift_reg.OUTPUTSELECT
+out <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|fulladder:adder_1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|serial_register:S_register
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+arstn => out[0]~reg0.ACLR
+arstn => out[1]~reg0.ACLR
+arstn => out[2]~reg0.ACLR
+arstn => out[3]~reg0.ACLR
+s_in => out[3]~reg0.DATAIN
+en => out[0]~reg0.ENA
+en => out[3]~reg0.ENA
+en => out[2]~reg0.ENA
+en => out[1]~reg0.ENA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

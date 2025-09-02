@@ -1,0 +1,32 @@
+|substractor
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+a[4] => Add0.IN4
+a[5] => Add0.IN3
+a[6] => Add0.IN2
+a[7] => Add0.IN1
+a[7] => overflow.IN0
+a[7] => overflow.IN0
+b[0] => Add0.IN16
+b[1] => Add0.IN15
+b[2] => Add0.IN14
+b[3] => Add0.IN13
+b[4] => Add0.IN12
+b[5] => Add0.IN11
+b[6] => Add0.IN10
+b[7] => overflow.IN1
+b[7] => Add0.IN9
+b[7] => overflow.IN1
+result[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+

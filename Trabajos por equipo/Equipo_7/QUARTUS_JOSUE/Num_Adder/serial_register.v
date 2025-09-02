@@ -1,0 +1,16 @@
+module serial_register #(parameter WIDTH = 4)(
+	input clk,
+	input arstn,
+	input s_in,
+	input en,
+	output reg [WIDTH-1:0]out
+);
+	
+		always @(posedge clk or negedge arstn) begin
+			if(!arstn)
+				out <= {WIDTH{1'b0}};
+			else if (en) begin
+				out <= {s_in, out[WIDTH-1:1]};
+			end
+		end
+endmodule 

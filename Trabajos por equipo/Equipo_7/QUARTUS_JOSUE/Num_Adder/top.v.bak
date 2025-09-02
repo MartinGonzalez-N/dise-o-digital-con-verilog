@@ -1,0 +1,6 @@
+module top (
+
+	input a,
+	input arst,
+	input 
+);

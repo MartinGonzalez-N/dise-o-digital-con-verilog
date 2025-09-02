@@ -1,0 +1,25 @@
+|Lab4A
+s_in => out.DATAA
+arst => out[0]~reg0.ACLR
+arst => out[1]~reg0.ACLR
+arst => out[2]~reg0.ACLR
+arst => out[3]~reg0.ACLR
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+en => out[0]~reg0.ENA
+en => out[3]~reg0.ENA
+en => out[2]~reg0.ENA
+en => out[1]~reg0.ENA
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+rot => out.OUTPUTSELECT
+out[0] << out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] << out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] << out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] << out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

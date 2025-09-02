@@ -1,0 +1,243 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Restador_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE {C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/Restador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:22:22 on Aug 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE" C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/Restador.v 
+# -- Compiling module Restador
+# 
+# Top level modules:
+# 	Restador
+# End time: 12:22:22 on Aug 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE {C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:22:22 on Aug 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE" C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 12:22:22 on Aug 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 12:22:22 on Aug 27,2025
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.Restador
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: Assertion error.
+#    Time: 0 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 10 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 20 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 30 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 40 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 50 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 60 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 70 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 80 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 90 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 100 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 110 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 120 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 130 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 140 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 150 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 160 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 170 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 180 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 190 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 200 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 210 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 220 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 230 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 240 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 250 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 260 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 270 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 280 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 290 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 300 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 310 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 320 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 330 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 340 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 350 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 360 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 370 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 380 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 390 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 400 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 410 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 420 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 430 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 440 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 450 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 460 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 480 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 490 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 500 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 510 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 520 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 540 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 550 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 560 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 570 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 580 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 590 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 600 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 610 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 620 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 630 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 640 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 650 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 660 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 670 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 680 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 690 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 700 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 710 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 730 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 740 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 750 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 760 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 770 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 780 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 790 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 800 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 810 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 820 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 830 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 840 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 850 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 860 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 870 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 880 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 890 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 900 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 910 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 920 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 930 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 940 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 950 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 960 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 970 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 980 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# ** Error: Assertion error.
+#    Time: 990 ps  Scope: tb File: C:/Users/LAB01-PC20/Documents/QUARTUS_JOSUE/tb.sv Line: 19
+# End time: 12:26:01 on Aug 27,2025, Elapsed time: 0:03:39
+# Errors: 97, Warnings: 0

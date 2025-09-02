@@ -1,0 +1,46 @@
+module tb;
+localparam N= 4;
+
+logic clk; 
+logic arstn;
+logic shift_en;
+logic dir; 
+logic rot_in;
+logic in;
+logic [N-1:0]Q;
+
+shiftregister #(.N(N))  uut(
+    .clk(clk),
+    .arstn(arstn),
+    .shift(shift),
+    .dir(dir),
+    .rot_in(rot_in),
+    .in(in),
+    .Q(Q)
+   );
+ always #5 clk = ~clk;
+ initial begin
+   $display("=== INICIO DE SIMULACION ===");
+    clk      = 0; 
+	 arstn    = 0;
+	 shift_en = 0;
+	 dir      = 0;
+	 rot_in   = 0;
+	 in       = 0:
+	
+  #12 arstn = 1;
+ $display("[%0t] reset liberado, Q = %b", $time,Q);
+ 
+    shift_en = 1;
+	 dir      = 0;
+	 rot_in   = 1;
+	 in       = 1:
+   #10;
+	in        = 0;
+	#10;
+	in        = 1;
+	#10;
+   $display
+	
+	
+endmodule 

@@ -1,0 +1,185 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/marti/Documents/curso/projects/lab5_serial_adder/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1756496004
+!i10b 1
+!s100 [ke_ViL3OQD?ic`RUKk4H0
+IM5hJBRadl[;aGXX8DDbTc1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_sv_unit
+S1
+R0
+Z4 w1756393398
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/adder.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/adder.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1756496004.000000
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/adder.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder
+Z9 tCvgOpt 0
+vcontrol_fsm
+R1
+R2
+!i10b 1
+!s100 59YO==OS:CkK21<DKEhXi3
+I340SGM>:B;H24oWHBbYGB2
+R3
+!s105 control_fsm_sv_unit
+S1
+R0
+R4
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/control_fsm.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/control_fsm.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/control_fsm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/control_fsm.sv|
+!i113 1
+R7
+R8
+R9
+vcounter
+R1
+R2
+!i10b 1
+!s100 _zY?QicZCUjH7M>>mDf>g3
+I_RiZb^K<h2V0J@k3O^6dO1
+R3
+!s105 counter_sv_unit
+S1
+R0
+R4
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/counter.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/counter.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/counter.sv|
+!i113 1
+R7
+R8
+R9
+vinput_reg
+R1
+R2
+!i10b 1
+!s100 g3C[KANjeo>:f^:Lio1T90
+IeX0?P;Bo1HnCNGgi@d31P3
+R3
+!s105 input_reg_sv_unit
+S1
+R0
+Z10 w1756393399
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/input_reg.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/input_reg.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/input_reg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/input_reg.sv|
+!i113 1
+R7
+R8
+R9
+voutput_reg
+R1
+R2
+!i10b 1
+!s100 ]KhVRCOC:Di;1Na5IXK=o3
+IK6T[eihLfl@8d5U6fk51:3
+R3
+!s105 output_reg_sv_unit
+S1
+R0
+R10
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/output_reg.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/output_reg.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/output_reg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/output_reg.sv|
+!i113 1
+R7
+R8
+R9
+vserial_adder
+R1
+R2
+!i10b 1
+!s100 d346iOaiOcocCo>EFUWCC0
+IfIg8Mf?BT1UBn;1K[ngfQ0
+R3
+!s105 serial_adder_sv_unit
+S1
+R0
+R10
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder.sv|
+!i113 1
+R7
+R8
+R9
+vserial_adder_tb
+R1
+R2
+!i10b 1
+!s100 AcXMczJ_eEhQQL7B6WlHC1
+IP5IV0kz83``=2zhSYBH9d3
+R3
+!s105 serial_adder_tb_sv_unit
+S1
+R0
+R10
+8C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder_tb.sv
+FC:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/marti/Documents/curso/projects/lab5_serial_adder|C:/Users/marti/Documents/curso/projects/lab5_serial_adder/serial_adder_tb.sv|
+!i113 1
+R7
+R8
+R9

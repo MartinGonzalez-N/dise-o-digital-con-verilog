@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at bcd_7seg.v(4): object "A" differs only in case from object "a" in the same scope File: C:/Users/marti/Desktop/Clases tepic/dise-o-digital-con-verilog/Labs/bcd_7seg/bcd_7seg.v Line: 4
+Info (10281): Verilog HDL Declaration information at bcd_7seg.v(5): object "B" differs only in case from object "b" in the same scope File: C:/Users/marti/Desktop/Clases tepic/dise-o-digital-con-verilog/Labs/bcd_7seg/bcd_7seg.v Line: 5
+Info (10281): Verilog HDL Declaration information at bcd_7seg.v(6): object "C" differs only in case from object "c" in the same scope File: C:/Users/marti/Desktop/Clases tepic/dise-o-digital-con-verilog/Labs/bcd_7seg/bcd_7seg.v Line: 6
+Info (10281): Verilog HDL Declaration information at bcd_7seg.v(7): object "D" differs only in case from object "d" in the same scope File: C:/Users/marti/Desktop/Clases tepic/dise-o-digital-con-verilog/Labs/bcd_7seg/bcd_7seg.v Line: 7

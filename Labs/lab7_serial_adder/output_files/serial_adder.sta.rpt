@@ -1,0 +1,976 @@
+Timing Analyzer report for serial_adder
+Fri Feb 14 15:50:42 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; serial_adder                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.4%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 562.43 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.778 ; -13.178            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.404 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -35.125                          ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                       ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.697      ;
+; -0.574 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.492      ;
+; -0.574 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.492      ;
+; -0.574 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.492      ;
+; -0.574 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.492      ;
+; -0.565 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.079     ; 1.484      ;
+; -0.563 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.482      ;
+; -0.467 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.080     ; 1.385      ;
+; -0.467 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.080     ; 1.385      ;
+; -0.467 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.080     ; 1.385      ;
+; -0.467 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.080     ; 1.385      ;
+; -0.467 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.080     ; 1.385      ;
+; -0.414 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.079     ; 1.333      ;
+; -0.412 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.331      ;
+; -0.412 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.080     ; 1.330      ;
+; -0.385 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.303      ;
+; -0.381 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.299      ;
+; -0.340 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.079     ; 1.259      ;
+; -0.285 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.204      ;
+; -0.277 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.079     ; 1.196      ;
+; -0.276 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.195      ;
+; -0.236 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.080     ; 1.154      ;
+; -0.220 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.139      ;
+; -0.203 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.079     ; 1.122      ;
+; -0.197 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.116      ;
+; -0.188 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.079     ; 1.107      ;
+; -0.182 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.079     ; 1.101      ;
+; -0.179 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.080     ; 1.097      ;
+; -0.170 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.079     ; 1.089      ;
+; -0.170 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.079     ; 1.089      ;
+; -0.082 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.079     ; 1.001      ;
+; -0.070 ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.080     ; 0.988      ;
+; -0.064 ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.080     ; 0.982      ;
+; -0.058 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.977      ;
+; -0.046 ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.079     ; 0.965      ;
+; -0.043 ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.079     ; 0.962      ;
+; -0.034 ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.079     ; 0.953      ;
+; -0.034 ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.079     ; 0.953      ;
+; 0.068  ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.851      ;
+; 0.070  ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.079     ; 0.849      ;
+; 0.074  ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.845      ;
+; 0.095  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.079     ; 0.824      ;
+; 0.117  ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.079     ; 0.802      ;
+; 0.117  ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.079     ; 0.802      ;
+; 0.118  ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.079     ; 0.801      ;
+; 0.120  ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.079     ; 0.799      ;
+; 0.129  ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.079     ; 0.790      ;
+; 0.130  ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.079     ; 0.789      ;
+; 0.130  ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.079     ; 0.789      ;
+; 0.154  ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.765      ;
+; 0.154  ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.765      ;
+; 0.185  ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.404 ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.409 ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.674      ;
+; 0.431 ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.079      ; 0.696      ;
+; 0.431 ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.696      ;
+; 0.431 ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.696      ;
+; 0.438 ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.703      ;
+; 0.439 ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.079      ; 0.704      ;
+; 0.439 ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.704      ;
+; 0.440 ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.079      ; 0.705      ;
+; 0.461 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.726      ;
+; 0.474 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.739      ;
+; 0.478 ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.743      ;
+; 0.479 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.744      ;
+; 0.555 ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.556 ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.561 ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.826      ;
+; 0.563 ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.079      ; 0.828      ;
+; 0.591 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.856      ;
+; 0.622 ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.078      ; 0.886      ;
+; 0.632 ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.078      ; 0.896      ;
+; 0.635 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.901      ;
+; 0.640 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.905      ;
+; 0.644 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.664 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.929      ;
+; 0.670 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.935      ;
+; 0.677 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.942      ;
+; 0.734 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.080      ; 1.000      ;
+; 0.738 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.080      ; 1.004      ;
+; 0.765 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.031      ;
+; 0.768 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.032      ;
+; 0.814 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.078      ;
+; 0.819 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.084      ;
+; 0.820 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.085      ;
+; 0.853 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.119      ;
+; 0.855 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.079      ; 1.120      ;
+; 0.903 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.168      ;
+; 0.914 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.179      ;
+; 0.936 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.201      ;
+; 0.937 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.202      ;
+; 1.043 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.308      ;
+; 1.044 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.309      ;
+; 1.189 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.078      ; 1.453      ;
+; 1.189 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.078      ; 1.453      ;
+; 1.189 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.078      ; 1.453      ;
+; 1.189 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.078      ; 1.453      ;
+; 1.189 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.078      ; 1.453      ;
+; 1.282 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.546      ;
+; 1.282 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.546      ;
+; 1.282 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.546      ;
+; 1.282 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.078      ; 1.546      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
+; 1.453 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.718      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 617.28 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.620 ; -9.807            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.356 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -35.125                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.620 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.549      ;
+; -0.434 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.362      ;
+; -0.434 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.362      ;
+; -0.434 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.362      ;
+; -0.434 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.362      ;
+; -0.420 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.070     ; 1.349      ;
+; -0.418 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.347      ;
+; -0.343 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.071     ; 1.271      ;
+; -0.343 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.071     ; 1.271      ;
+; -0.343 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.071     ; 1.271      ;
+; -0.343 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.071     ; 1.271      ;
+; -0.343 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.071     ; 1.271      ;
+; -0.291 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.070     ; 1.220      ;
+; -0.289 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.218      ;
+; -0.257 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.071     ; 1.185      ;
+; -0.233 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.161      ;
+; -0.229 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.157      ;
+; -0.192 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.070     ; 1.121      ;
+; -0.158 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.087      ;
+; -0.147 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.070     ; 1.076      ;
+; -0.146 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.075      ;
+; -0.105 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.071     ; 1.033      ;
+; -0.093 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.022      ;
+; -0.082 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.070     ; 1.011      ;
+; -0.073 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.070     ; 1.002      ;
+; -0.064 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.993      ;
+; -0.062 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.071     ; 0.990      ;
+; -0.059 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.070     ; 0.988      ;
+; -0.059 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.070     ; 0.988      ;
+; -0.048 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.070     ; 0.977      ;
+; 0.026  ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.903      ;
+; 0.040  ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.071     ; 0.888      ;
+; 0.051  ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.878      ;
+; 0.052  ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.071     ; 0.876      ;
+; 0.059  ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.070     ; 0.870      ;
+; 0.061  ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.868      ;
+; 0.069  ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.070     ; 0.860      ;
+; 0.069  ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.070     ; 0.860      ;
+; 0.164  ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.765      ;
+; 0.165  ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.070     ; 0.764      ;
+; 0.169  ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.760      ;
+; 0.187  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.742      ;
+; 0.207  ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.070     ; 0.722      ;
+; 0.208  ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.721      ;
+; 0.209  ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.070     ; 0.720      ;
+; 0.210  ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.070     ; 0.719      ;
+; 0.218  ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.070     ; 0.711      ;
+; 0.219  ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.070     ; 0.710      ;
+; 0.219  ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.070     ; 0.710      ;
+; 0.246  ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.683      ;
+; 0.246  ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.683      ;
+; 0.270  ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.356 ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.367 ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.608      ;
+; 0.398 ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.070      ; 0.639      ;
+; 0.398 ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.639      ;
+; 0.399 ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.640      ;
+; 0.404 ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.645      ;
+; 0.406 ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.425 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.666      ;
+; 0.437 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.678      ;
+; 0.441 ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 0.682      ;
+; 0.442 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.683      ;
+; 0.510 ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.515 ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.756      ;
+; 0.517 ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.070      ; 0.758      ;
+; 0.543 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.784      ;
+; 0.578 ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.818      ;
+; 0.584 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.826      ;
+; 0.585 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.826      ;
+; 0.587 ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.069      ; 0.827      ;
+; 0.589 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.070      ; 0.830      ;
+; 0.608 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 0.849      ;
+; 0.613 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.070      ; 0.854      ;
+; 0.619 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.860      ;
+; 0.670 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.071      ; 0.912      ;
+; 0.682 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.071      ; 0.924      ;
+; 0.713 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.953      ;
+; 0.715 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.957      ;
+; 0.756 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.996      ;
+; 0.757 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.998      ;
+; 0.759 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.000      ;
+; 0.779 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.021      ;
+; 0.795 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 1.036      ;
+; 0.838 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.079      ;
+; 0.846 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.070      ; 1.087      ;
+; 0.847 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.088      ;
+; 0.850 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.070      ; 1.091      ;
+; 0.950 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.070      ; 1.191      ;
+; 0.951 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.070      ; 1.192      ;
+; 1.094 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.069      ; 1.334      ;
+; 1.094 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.069      ; 1.334      ;
+; 1.094 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.069      ; 1.334      ;
+; 1.094 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.069      ; 1.334      ;
+; 1.094 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.069      ; 1.334      ;
+; 1.186 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.069      ; 1.426      ;
+; 1.186 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.069      ; 1.426      ;
+; 1.186 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.069      ; 1.426      ;
+; 1.186 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.069      ; 1.426      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
+; 1.339 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 0.000        ; 0.070      ; 1.580      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.134 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.183 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -29.511                         ;
++-------+--------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.134 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.813      ;
+; 0.230 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.716      ;
+; 0.230 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.716      ;
+; 0.230 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.716      ;
+; 0.230 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.716      ;
+; 0.248 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.699      ;
+; 0.249 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.698      ;
+; 0.285 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.661      ;
+; 0.285 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.661      ;
+; 0.285 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.661      ;
+; 0.285 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.041     ; 0.661      ;
+; 0.285 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.041     ; 0.661      ;
+; 0.299 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.648      ;
+; 0.311 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.636      ;
+; 0.316 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.630      ;
+; 0.334 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.040     ; 0.613      ;
+; 0.336 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.611      ;
+; 0.337 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.610      ;
+; 0.364 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.583      ;
+; 0.372 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.575      ;
+; 0.373 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.574      ;
+; 0.392 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.554      ;
+; 0.401 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.546      ;
+; 0.408 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.539      ;
+; 0.416 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.531      ;
+; 0.417 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.530      ;
+; 0.421 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.526      ;
+; 0.423 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.040     ; 0.524      ;
+; 0.430 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.040     ; 0.517      ;
+; 0.433 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 1.000        ; -0.040     ; 0.514      ;
+; 0.468 ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 1.000        ; -0.041     ; 0.478      ;
+; 0.470 ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 1.000        ; -0.041     ; 0.476      ;
+; 0.474 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.473      ;
+; 0.474 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.473      ;
+; 0.492 ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.040     ; 0.455      ;
+; 0.496 ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.451      ;
+; 0.499 ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.448      ;
+; 0.499 ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.448      ;
+; 0.539 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.408      ;
+; 0.540 ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.040     ; 0.407      ;
+; 0.543 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.404      ;
+; 0.555 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.392      ;
+; 0.567 ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.040     ; 0.380      ;
+; 0.567 ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.040     ; 0.380      ;
+; 0.567 ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.380      ;
+; 0.569 ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 1.000        ; -0.040     ; 0.378      ;
+; 0.574 ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 1.000        ; -0.040     ; 0.373      ;
+; 0.574 ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.373      ;
+; 0.575 ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 1.000        ; -0.040     ; 0.372      ;
+; 0.588 ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.359      ;
+; 0.588 ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.359      ;
+; 0.597 ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.183 ; carry_reg                                   ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; counter:counter_i|count[1]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.190 ; output_reg:output_reg_i|out[0]              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.190 ; input_reg:input_reg_a|data[1]               ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.190 ; input_reg:input_reg_a|data[2]               ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.190 ; counter:counter_i|count[0]                  ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.194 ; output_reg:output_reg_i|out[1]              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.318      ;
+; 0.195 ; output_reg:output_reg_i|out[1]              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.319      ;
+; 0.195 ; output_reg:output_reg_i|out[3]              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.319      ;
+; 0.195 ; output_reg:output_reg_i|out[3]              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.319      ;
+; 0.206 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.330      ;
+; 0.213 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.337      ;
+; 0.216 ; control_fsm:control_fsm_i|busy              ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.340      ;
+; 0.217 ; control_fsm:control_fsm_i|busy              ; counter:counter_i|count[0]                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.341      ;
+; 0.251 ; input_reg:input_reg_b|data[3]               ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; input_reg:input_reg_a|data[3]               ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.253 ; output_reg:output_reg_i|out[2]              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.377      ;
+; 0.255 ; output_reg:output_reg_i|out[2]              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.040      ; 0.379      ;
+; 0.270 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.394      ;
+; 0.274 ; carry_reg                                   ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.397      ;
+; 0.276 ; carry_reg                                   ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.399      ;
+; 0.277 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.401      ;
+; 0.291 ; input_reg:input_reg_b|data[1]               ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.415      ;
+; 0.292 ; input_reg:input_reg_b|data[2]               ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.416      ;
+; 0.304 ; input_reg:input_reg_a|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.428      ;
+; 0.308 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|done              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.432      ;
+; 0.313 ; counter:counter_i|count[0]                  ; counter:counter_i|count[1]                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.437      ;
+; 0.332 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.040      ; 0.456      ;
+; 0.333 ; control_fsm:control_fsm_i|state.STATE_DONE  ; control_fsm:control_fsm_i|state.STATE_START ; clk          ; clk         ; 0.000        ; 0.040      ; 0.457      ;
+; 0.337 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.461      ;
+; 0.341 ; input_reg:input_reg_a|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.464      ;
+; 0.365 ; input_reg:input_reg_b|data[0]               ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.488      ;
+; 0.367 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.491      ;
+; 0.368 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.492      ;
+; 0.381 ; input_reg:input_reg_b|data[0]               ; carry_reg                                   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.505      ;
+; 0.382 ; control_fsm:control_fsm_i|state.STATE_BUSY  ; control_fsm:control_fsm_i|state.STATE_DONE  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.506      ;
+; 0.405 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.529      ;
+; 0.411 ; control_fsm:control_fsm_i|state.STATE_START ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.535      ;
+; 0.443 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.567      ;
+; 0.443 ; counter:counter_i|count[0]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.567      ;
+; 0.493 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|state.STATE_BUSY  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.617      ;
+; 0.493 ; counter:counter_i|count[1]                  ; control_fsm:control_fsm_i|busy              ; clk          ; clk         ; 0.000        ; 0.040      ; 0.617      ;
+; 0.545 ; control_fsm:control_fsm_i|done              ; sum[0]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.039      ; 0.668      ;
+; 0.545 ; control_fsm:control_fsm_i|done              ; sum[1]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.039      ; 0.668      ;
+; 0.545 ; control_fsm:control_fsm_i|done              ; sum[2]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.039      ; 0.668      ;
+; 0.545 ; control_fsm:control_fsm_i|done              ; sum[3]~reg0                                 ; clk          ; clk         ; 0.000        ; 0.039      ; 0.668      ;
+; 0.545 ; control_fsm:control_fsm_i|done              ; c~reg0                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.668      ;
+; 0.586 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[0]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.709      ;
+; 0.586 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[1]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.709      ;
+; 0.586 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[2]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.709      ;
+; 0.586 ; control_fsm:control_fsm_i|busy              ; output_reg:output_reg_i|out[3]              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.709      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[0]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[1]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[2]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[0]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[1]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[2]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_a|data[3]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
+; 0.670 ; control_fsm:control_fsm_i|busy              ; input_reg:input_reg_b|data[3]               ; clk          ; clk         ; 0.000        ; 0.040      ; 0.794      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.778  ; 0.183 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -0.778  ; 0.183 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -13.178 ; 0.0   ; 0.0      ; 0.0     ; -35.125             ;
+;  clk             ; -13.178 ; 0.000 ; N/A      ; N/A     ; -35.125             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; sum[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; sum[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; sum[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; sum[3]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; c             ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; start                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_a[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_b[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_a[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_b[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_a[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_b[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_a[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in_b[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sum[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; sum[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; sum[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; sum[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; c             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sum[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; sum[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; sum[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; sum[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; c             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sum[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; sum[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; sum[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; sum[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; c             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 59       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 59       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 22    ; 22   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; in_a[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; in_a[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_a[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; in_b[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sum[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Feb 14 15:50:41 2025
+Info: Command: quartus_sta serial_adder -c serial_adder
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'serial_adder.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.778
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.778             -13.178 clk 
+Info (332146): Worst-case hold slack is 0.404
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.404               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -35.125 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.620
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.620              -9.807 clk 
+Info (332146): Worst-case hold slack is 0.356
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.356               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -35.125 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.134
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.134               0.000 clk 
+Info (332146): Worst-case hold slack is 0.183
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.183               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -29.511 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Fri Feb 14 15:50:42 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

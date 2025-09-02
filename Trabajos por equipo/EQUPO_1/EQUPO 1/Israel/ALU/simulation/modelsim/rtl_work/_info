@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/LAB01-PC24/Documents/Israel/ALU/simulation/modelsim
+valu
+Z1 !s110 1756353414
+!i10b 1
+!s100 8zOgdMbmki88QQJG<nlNT2
+IZehkJMNXC_^A<[:18iSaM1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1756353076
+8C:/Users/LAB01-PC24/Documents/Israel/ALU/alu.v
+FC:/Users/LAB01-PC24/Documents/Israel/ALU/alu.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1756353414.000000
+!s107 C:/Users/LAB01-PC24/Documents/Israel/ALU/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/LAB01-PC24/Documents/Israel/ALU|C:/Users/LAB01-PC24/Documents/Israel/ALU/alu.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/LAB01-PC24/Documents/Israel/ALU
+Z5 tCvgOpt 0
+vtb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 E6Jd;]4l:;W>1d`m8:S=V3
+Ije4ihFamTH[cRWGabAeYJ2
+R2
+!s105 tb_sv_unit
+S1
+R0
+w1756353411
+8C:/Users/LAB01-PC24/Documents/Israel/ALU/tb.sv
+FC:/Users/LAB01-PC24/Documents/Israel/ALU/tb.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/LAB01-PC24/Documents/Israel/ALU/tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/LAB01-PC24/Documents/Israel/ALU|C:/Users/LAB01-PC24/Documents/Israel/ALU/tb.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/LAB01-PC24/Documents/Israel/ALU
+R5

@@ -1,0 +1,56 @@
+module control_fsm(
+    input clk,
+    input start,
+    input cnt_done,
+    output reg busy,
+    output reg done
+);
+    localparam bit[1:0] STATE_IDLE = 0;
+    localparam bit[1:0] STATE_START = 1;
+    localparam bit[1:0] STATE_BUSY = 2;
+    localparam bit[1:0] STATE_DONE = 3;
+    reg [1:0] state=STATE_IDLE;
+    reg [1:0] next_state=STATE_IDLE;
+
+    always @(posedge clk) begin
+        state <= next_state;
+    end
+
+    always @(*) begin
+        case (state)
+            STATE_IDLE: 
+            if (!start) begin
+                next_state = STATE_START;
+            end else begin
+                next_state = STATE_IDLE;
+            end
+            STATE_START:
+            if (start) begin
+                next_state = STATE_BUSY;
+            end else begin
+                next_state = STATE_START;
+            end
+            STATE_BUSY:
+            if (cnt_done) begin
+                next_state = STATE_DONE;
+            end else begin
+                next_state = STATE_BUSY;
+            end
+            STATE_DONE: 
+            next_state = STATE_IDLE;
+        endcase
+    end
+
+    always @(posedge clk) begin
+        if (next_state==STATE_BUSY) begin
+            busy <= 1'b1;
+        end else begin
+            busy <= 1'b0;
+        end
+        if (next_state==STATE_DONE) begin
+            done <= 1'b1;
+        end else begin
+            done <= 1'b0;
+        end
+    end
+endmodule

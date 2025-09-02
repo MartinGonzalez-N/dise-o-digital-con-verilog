@@ -1,0 +1,22 @@
+module tb; 
+ reg[7:0] a,b;
+ wire [7:0] sub;
+ wire overflow;
+ integer ref_a=0;
+ integer ref_b=0;
+ integer ref_sub=0; 
+ rstador_rstador_i(.a(a),.b(b),.sub(sub),.overflow(overflow));
+ 
+ initial begigg
+   repeat (100) begin
+     a=$rendom;
+	  b=$random;
+	  ref_a= a;
+	  ref_b=b;
+	  ref_sub =ref_a - ref_b;
+	  if (ref_sun==sub)
+	    $display("error");
+   #10
+   end
+ end 
+endmodule

@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/serial_adder.sv}
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/adder.sv}
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/control_fsm.sv}
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/counter.sv}
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/input_reg.sv}
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/output_reg.sv}
+
+vlog -sv -work work +incdir+F:/SynologyDrive/Training/Nayarit\ Certificacion/Modulo\ 3\ Diseño\ de\ Sistemas\ Secuenciales\ (Intermedio)\ (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder {F:/SynologyDrive/Training/Nayarit Certificacion/Modulo 3 Diseño de Sistemas Secuenciales (Intermedio) (Martin-Francisco)/labs_resueltos/projects/lab5_serial_adder/serial_adder_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  serial_adder_tb
+
+add wave *
+view structure
+view signals
+run -all

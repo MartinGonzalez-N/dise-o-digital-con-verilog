@@ -1,0 +1,43 @@
+module FSM (
+	input en,
+	input clk,
+	input arstn
+);
+	reg state;
+	reg valid;
+	reg req;
+	reg rdy;
+	reg done;
+	reg START_IDLE;
+	reg START_BUSY;
+	reg START_DONE;
+	reg START_WAIT;
+	always @(posedge clk or negedge arstn) begin
+	if(!arstn) begin
+		state <= START_IDLE;
+		valid <= 1'b0;
+	end else begin
+	valid <= 1'b0;
+		case (state)
+		START_IDLE: begin
+			if (req)  begin
+				state <= START_BUSY;
+			end else begin
+				state <= START_IDLE;
+			end
+		end
+		START_BUSY: begin
+		if (!done) begin
+			state <= START_BUSY;
+		end else if (rdy) begin
+			state <= START_DONE;
+			valid <= 1'b1;
+		end else begin 
+			state <= START_WAIT;
+			valid <= 1'b1;
+		end
+	end
+	endcase
+	end
+	end
+endmodule 

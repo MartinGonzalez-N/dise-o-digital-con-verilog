@@ -1,0 +1,7 @@
+module counter(input clk,
+					input arstn,
+					input en,
+					input [3:0]preset,
+					output reg[3:0]count);
+					
+endmodule

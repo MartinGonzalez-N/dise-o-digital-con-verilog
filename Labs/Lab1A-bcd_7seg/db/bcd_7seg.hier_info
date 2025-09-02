@@ -1,0 +1,29 @@
+|bcd_7seg
+A => a.IN0
+B => a.IN0
+B => b.IN0
+B => a.IN1
+B => c.IN0
+C => b.IN1
+C => c.IN1
+C => f.IN0
+C => a.IN1
+C => a.IN1
+D => a.IN1
+D => b.IN1
+D => d.IN1
+D => e.IN1
+D => f.IN1
+D => f.IN1
+D => a.IN1
+D => b.IN1
+D => c.IN1
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+g <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

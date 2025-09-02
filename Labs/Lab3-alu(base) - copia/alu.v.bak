@@ -1,0 +1,9 @@
+module (
+input [3:0]a,
+input [3:0]b,
+input [1:0]control,
+output [3:0]result
+);
+
+
+endmodule

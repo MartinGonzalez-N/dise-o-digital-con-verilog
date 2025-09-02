@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/LAB01-PC24/Documents/Israel/subtractor/simulation/modelsim
+vsubtractor
+Z1 !s110 1756347681
+!i10b 1
+!s100 Jz[hAgEe@ICSWIS8[983C0
+IgQ5I79:Odn0mJg;=Aj`2l2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1756347046
+8C:/Users/LAB01-PC24/Documents/Israel/subtractor/subtractor.v
+FC:/Users/LAB01-PC24/Documents/Israel/subtractor/subtractor.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1756347681.000000
+!s107 C:/Users/LAB01-PC24/Documents/Israel/subtractor/subtractor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/LAB01-PC24/Documents/Israel/subtractor|C:/Users/LAB01-PC24/Documents/Israel/subtractor/subtractor.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/LAB01-PC24/Documents/Israel/subtractor
+Z5 tCvgOpt 0
+vtb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 W[n4FFa=m=Si<Danz=4QT2
+I]5Y<QC2Ia@W2B7cj>TjVB1
+R2
+!s105 tb_sv_unit
+S1
+R0
+w1756347640
+8C:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files/tb.sv
+FC:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files/tb.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files/tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files|C:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files/tb.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/LAB01-PC24/Documents/Israel/subtractor/output_files
+R5

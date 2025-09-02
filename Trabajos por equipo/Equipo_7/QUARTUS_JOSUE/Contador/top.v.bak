@@ -1,0 +1,14 @@
+module top (
+	input clk,
+	input arst,
+	input en
+	input [3:0]preset,
+	output reg [6:0]display
+
+);
+	wire [3:0] count;
+	counter count_1(.clk(clk),.arst(arst),.en(en),.preset(preset),.count(count))
+	
+	bcd bcd_i(a.(count),.display(display));
+	
+endmodule 

@@ -1,0 +1,55 @@
+module bcd2 (
+ input [3:0]a,
+ output reg [0:6]display
+ 
+);
+always @(*)
+begin
+case (a)
+	4'b0000:begin 
+		display = 7'b0000001;
+	end
+
+	4'b0001:begin 
+		display = 7'b1001111;
+	end
+
+	4'b0010:begin 
+		display = 7'b0010010;
+	end
+
+	4'b0011:begin 
+		display = 7'b0000110;
+	end
+
+	4'b0100:begin 
+		display = 7'b1001100;
+	end
+
+	4'b0101:begin 
+		display = 7'b0100100;
+	end
+
+	4'b0110:begin 
+		display = 7'b0100000;
+	end
+
+	4'b0111:begin 
+		display = 7'b0001111;
+	end
+
+	4'b1000:begin 
+		display = 7'b0000000;
+	end
+	
+	4'b1001:begin 
+		display = 7'b0000100;
+	end
+
+	default:begin
+	display = 7'b1111110;
+	end
+
+endcase
+end
+endmodule
